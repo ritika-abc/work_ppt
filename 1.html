@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 4000px;
+        }
+        .scroll{
+            width: 100%;
+        overflow: hidden;
+        }
+        img{
+            position: fixed;
+            transform: translate(0px);
+            left: 0px;
+            bottom: 0px;
+        }
+    </style>
+</head>
+<body>
+    <div class="scroll">
+    <img src="1.gif" height="auto" width="20%" alt="">
+
+    </div>
+    <script>
+        var img = document.querySelector("img");
+        window.onscroll = function (){
+            var Y = pageYOffset / 5;
+            img.style.left =  Y + "px";
+            img.style.bottom =  Y + "px";
+            console.log(Y)
+        }
+    </script>
+</body>
+</html>
